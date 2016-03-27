@@ -1,0 +1,7 @@
+    $this->add_css('./assets/bootstrap-material-theme/css/roboto.min.css');
+    $this->add_css('./assets/bootstrap-material-theme/css/material.min.css');
+    $this->add_css('./assets/bootstrap-material-theme/css/ripples.min.css');
+    $this->add_js('./assets/bootstrap-material-theme/js/ripples.min.js');
+    $this->add_js('./assets/bootstrap-material-theme/js/material.min.js');
+
+    $this->add_js_onready('$.material.init();');
