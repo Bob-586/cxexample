@@ -91,6 +91,7 @@ ini_set('session.gc_divisor', 1000); // 1000 is a good production value(.01% cha
 function project_folder_name() {
   $url = $_SERVER['REQUEST_URI']; //returns the current URL
   $paths = dirname(__FILE__);
+  $paths = str_replace('\\', "/", $paths); // Fix for Windows
   $folder_name = ltrim(substr($paths, strrpos($paths, '/')), '/');
   $found_folder = (stripos($url, $folder_name) !== false);
   if ($found_folder === false) {
