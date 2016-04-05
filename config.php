@@ -23,11 +23,17 @@ cx_configure::set('cx', array(
   'session_variable' => 'HOME_SYS_', // set session variable name for project
   'login' => 'login_', // Name for login session variable, will be added to the prefix
   'logger_time_zone' => 'America/Detroit', // My Log Files, use my timezone
+));
+
+cx_configure::set('email', array(
+//  'host' => '', // SMTP Hosts - seperated by ;
+//  'username' => '',
+//  'password' => '',
   'send_emails' => true, // Enable emails
   'email_on_errors' => isset($_SERVER['email_on_errors']) ? cx_bool($_SERVER['email_on_errors']) : false,
   'admin_name' => 'Bob', // Email Admin Name
-  'admin_email' => 'Me@Localhost', // Email Admins on error
-));
+  'admin_email' => 'Bob_586@Yahoo.com', // Email Admins on error
+));  
 
 cx_configure::set('security', array(
   'main_key' => $_SERVER['DT_C'], // Gets Key code from Server
